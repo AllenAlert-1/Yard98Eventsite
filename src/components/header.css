@@ -1,0 +1,122 @@
+/* src/components/Header.css */
+
+.header {
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f0c674;
+    left: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #f0c674; /* Gold color for logo */
+    margin-left: 20px;
+  }
+
+.logo-link {
+    text-decoration: none;
+    color: gold;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: gold;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
+    /* Animate mobile menu icon to X when open */
+    .bar.open:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .bar.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar.open:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+.active-link {
+    color: white;
+    border-bottom: 2px solid gold;
+}

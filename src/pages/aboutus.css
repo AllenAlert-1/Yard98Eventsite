@@ -1,0 +1,79 @@
+/* src/pages/AboutUs.css */
+
+.about-us-page {
+    padding: 100px 20px 50px 20px; /* Top padding to account for fixed header */
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .about-us-text {
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+.about-us-page h1 {
+    text-align: center;
+    color: gold;
+    margin-bottom: 50px;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.ceo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ceo-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ceo-image img {
+    border-radius: 50%;
+    width: 80%;
+    border: 5px solid #f0c674;
+  }
+
+.ceo-info {
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .ceo-section {
+        flex-direction: column;
+    }
+
+    .ceo-image {
+        width: 120px;
+        height: 120px;
+    }
+}
